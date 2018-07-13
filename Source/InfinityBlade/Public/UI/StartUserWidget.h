@@ -29,4 +29,6 @@ public:
 public:
 	/*≥ı ºªØ*/
 	virtual bool Initialize() override;
+	UFUNCTION()
+		void Quit();
 };

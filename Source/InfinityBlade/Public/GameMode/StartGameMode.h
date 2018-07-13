@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/GameMode.h"
 #include"StartUserWidget.h"
+#include"RegisterUI.h"
 #include "StartGameMode.generated.h"
 
 /**
@@ -17,9 +18,15 @@ class INFINITYBLADE_API AStartGameMode : public AGameMode
 public:
 	UPROPERTY()
 		UStartUserWidget* StartWidget;
+	UPROPERTY()
+		URegisterUI* RegisterWidget;
 
 public:
 	virtual void BeginPlay() override;
 	
+	UFUNCTION()
+		void RegisterBtnCallback();
 	
+	UFUNCTION()
+		void BackBtnCallback();
 };
